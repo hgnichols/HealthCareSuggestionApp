@@ -1,3 +1,8 @@
-.snowpack
-build
 node_modules
+
+/frontend-md-recommend/.cache
+/frontend-md-recommend/build
+/frontend-md-recommend/public/build
+.env
+/frontend-md-recommend/postgres-data
+.DS_Store
