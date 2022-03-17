@@ -7,7 +7,8 @@
     "dev": "nodemon src/app.ts",
     "start": "node app.js",
     "app": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker": "docker-compose up -d"
   },
   "author": "Hunter Nichols",
   "license": "MIT",

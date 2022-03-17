@@ -4,5 +4,5 @@ node_modules
 /frontend-md-recommend/build
 /frontend-md-recommend/public/build
 .env
-/frontend-md-recommend/postgres-data
+postgres-data
 .DS_Store
