@@ -1,25 +1,53 @@
-# New Project
+# Welcome to Remix!
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+- [Remix Docs](https://remix.run/docs)
 
-## Available Scripts
+## Development
 
-### npm start
+From your terminal:
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+```sh
+npm run dev
+```
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+This starts your app in development mode, rebuilding assets on file changes.
 
-### npm run build
+## Deployment
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+First, build your app for production:
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
+```sh
+npm run build
+```
 
-### npm test
+Then run the app in production mode:
 
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+```sh
+npm start
+```
+
+Now you'll need to pick a host to deploy it to.
+
+### DIY
+
+If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+
+Make sure to deploy the output of `remix build`
+
+- `build/`
+- `public/build/`
+
+### Using a Template
+
+When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
+
+```sh
+cd ..
+# create a new project, and pick a pre-configured host
+npx create-remix@latest
+cd my-new-remix-app
+# remove the new project's app (not the old one!)
+rm -rf app
+# copy your app over
+cp -R ../my-old-remix-app/app app
+```
